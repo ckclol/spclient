@@ -58,7 +58,6 @@ public class ServerList
 
     private void loadFeaturedServers() {
 		this.addServerData(new FeaturedServers("Hypixel", "mc.hypixel.net"));
-		this.addServerData(new FeaturedServers("Spiritual", "mc.spmc.ml"));
 		
 	}
 

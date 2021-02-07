@@ -461,7 +461,7 @@ public class Scoreboard
             default:
                 if (p_96517_0_ >= 3 && p_96517_0_ <= 18)
                 {
-                    EnumChatFormatting enumchatformatting = EnumChatFormatting.func_175744_a(p_96517_0_ - 3);
+                    EnumChatFormatting enumchatformatting = EnumChatFormatting.fromID(p_96517_0_ - 3);
 
                     if (enumchatformatting != null && enumchatformatting != EnumChatFormatting.RESET)
                     {

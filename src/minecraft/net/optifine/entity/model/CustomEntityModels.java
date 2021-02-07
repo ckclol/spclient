@@ -102,7 +102,7 @@ public class CustomEntityModels
         {
             if (originalEntityRenderMap == null)
             {
-                originalEntityRenderMap = new HashMap<>(map);
+                originalEntityRenderMap = new HashMap<Class, Render>(map);
             }
 
             return map;
@@ -115,7 +115,7 @@ public class CustomEntityModels
 
         if (originalTileEntityRenderMap == null)
         {
-            originalTileEntityRenderMap = new HashMap<>(map);
+            originalTileEntityRenderMap = new HashMap<Class, TileEntitySpecialRenderer>(map);
         }
 
         return map;
@@ -125,7 +125,7 @@ public class CustomEntityModels
     {
         String s = "optifine/cem/";
         String s1 = ".jem";
-        List<ResourceLocation> list = new ArrayList<>();
+        List<ResourceLocation> list = new ArrayList<ResourceLocation>();
         String[] astring = CustomModelRegistry.getModelNames();
 
         for (int i = 0; i < astring.length; ++i)

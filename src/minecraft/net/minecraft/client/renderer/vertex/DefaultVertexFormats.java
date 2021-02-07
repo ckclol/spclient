@@ -31,6 +31,7 @@ public class DefaultVertexFormats
     public static final VertexFormatElement field_181716_p = new VertexFormatElement(1, VertexFormatElement.EnumType.SHORT, VertexFormatElement.EnumUsage.UV, 2);
     public static final VertexFormatElement field_181717_q = new VertexFormatElement(0, VertexFormatElement.EnumType.BYTE, VertexFormatElement.EnumUsage.NORMAL, 3);
     public static final VertexFormatElement field_181718_r = new VertexFormatElement(0, VertexFormatElement.EnumType.BYTE, VertexFormatElement.EnumUsage.PADDING, 1);
+	public static final String POSITION_TEX_COLOR = null;
 
     public static void updateVertexFormats()
     {

@@ -1077,4 +1077,9 @@ public class WorldRenderer
             return this.stateVertexFormat;
         }
     }
+
+	public void begin(int i, String positionTexColor) {
+		// TODO Auto-generated method stub
+		
+	}
 }

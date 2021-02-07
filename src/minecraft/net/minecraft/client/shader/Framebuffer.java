@@ -197,7 +197,7 @@ public class Framebuffer
         }
     }
 
-    public void unbindFramebuffer()
+    public static void unbindFramebuffer()
     {
         if (OpenGlHelper.isFramebufferEnabled())
         {

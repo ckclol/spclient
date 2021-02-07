@@ -3,6 +3,8 @@ package net.minecraft.client.gui;
 import com.ibm.icu.text.ArabicShaping;
 import com.ibm.icu.text.ArabicShapingException;
 import com.ibm.icu.text.Bidi;
+
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -110,6 +112,8 @@ public class FontRenderer implements IResourceManagerReloadListener
     private float[] charWidthFloat = new float[256];
     private boolean blend = false;
     private GlBlendState oldBlendState = new GlBlendState();
+    private float hue = 0;
+   
 
     public FontRenderer(GameSettings gameSettingsIn, ResourceLocation location, TextureManager textureManagerIn, boolean unicode)
     {
@@ -459,7 +463,7 @@ public class FontRenderer implements IResourceManagerReloadListener
 
             if (c0 == 167 && i + 1 < p_78255_1_.length())
             {
-                int l = "0123456789abcdefklmnor".indexOf(p_78255_1_.toLowerCase(Locale.ENGLISH).charAt(i + 1));
+                int l = "0123456789abcdefklmnors".indexOf(p_78255_1_.toLowerCase(Locale.ENGLISH).charAt(i + 1));
 
                 if (l < 16)
                 {
@@ -517,6 +521,15 @@ public class FontRenderer implements IResourceManagerReloadListener
                     this.underlineStyle = false;
                     this.italicStyle = false;
                     this.setColor(this.red, this.blue, this.green, this.alpha);
+                }
+                else if(l == 22)
+                {
+                	Color color = Color.getHSBColor(this.hue, 1, l);
+                	this.setColor(color.getRed() / 255.0f, color.getGreen() / 255.0f, color.getBlue() / 255.0f, this.alpha);
+                	if (this.hue > 1) {
+                		this.hue = 0;
+                	}
+                	this.hue += 0.001;
                 }
 
                 ++i;

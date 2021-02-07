@@ -79,7 +79,6 @@ public class ServerListEntryNormal implements GuiListExtended.IGuiListEntry
 
         boolean IsFeaturedServer = (field_148301_e instanceof FeaturedServers);
         if (IsFeaturedServer) {
-        	drawImg(x, y, false, FeaturedServers.STAR_ICON);
         }
         boolean flag = this.field_148301_e.version > 47;
         boolean flag1 = this.field_148301_e.version < 47;

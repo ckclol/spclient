@@ -168,6 +168,7 @@ import net.minecraft.world.storage.ISaveFormat;
 import net.minecraft.world.storage.ISaveHandler;
 import net.minecraft.world.storage.WorldInfo;
 import spiritualclient.ClientHandler;
+import spiritualclient.event.ClientTickEvent;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.Validate;
@@ -2244,7 +2245,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
             this.mcProfiler.endStartSection("pendingConnection");
             this.myNetworkManager.processReceivedPackets();
         }
-
+        new ClientTickEvent().call();
         this.mcProfiler.endSection();
         this.systemTime = getSystemTime();
     }
@@ -2317,6 +2318,7 @@ public class Minecraft implements IThreadListener, IPlayerUsage
         networkmanager.sendPacket(new C00Handshake(47, socketaddress.toString(), 0, EnumConnectionState.LOGIN));
         networkmanager.sendPacket(new C00PacketLoginStart(this.getSession().getProfile()));
         this.myNetworkManager = networkmanager;
+        ClientHandler.getInstance().getDiscordRP().update("Playing", "Singleplayer");
     }
 
     /**

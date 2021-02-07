@@ -30,6 +30,8 @@ import net.minecraft.world.storage.WorldInfo;
 import net.optifine.CustomPanorama;
 import net.optifine.CustomPanoramaProperties;
 import net.optifine.reflect.Reflector;
+import spiritualclient.ClientHandler;
+
 import org.apache.commons.io.Charsets;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -199,6 +201,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
      */
     public void initGui()
     {
+    	ClientHandler.getInstance().getDiscordRP().update("Idle", "Main Menu");
         this.viewportTexture = new DynamicTexture(256, 256);
         this.backgroundTexture = this.mc.getTextureManager().getDynamicTextureLocation("background", this.viewportTexture);
         Calendar calendar = Calendar.getInstance();
@@ -263,7 +266,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
     /**
      * Adds Singleplayer and Multiplayer buttons on Main Menu for players who have bought the game.
      */
-    private void addSingleplayerMultiplayerButtons(int p_73969_1_, int p_73969_2_)
+    private void addSingleplayerMultiplayerButtons(int p_73969_1_, int p_73969_2_) {
     {
         this.buttonList.add(new GuiButton(1, this.width / 2 - 100, p_73969_1_, I18n.format("menu.singleplayer", new Object[0])));
         this.buttonList.add(new GuiButton(2, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 1, I18n.format("menu.multiplayer", new Object[0])));
@@ -276,6 +279,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         else
         {
             this.buttonList.add(this.realmsButton = new GuiButton(14, this.width / 2 - 100, p_73969_1_ + p_73969_2_ * 2, I18n.format("menu.online", new Object[0])));
+        }
         }
     }
 
@@ -402,9 +406,9 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         GlStateManager.matrixMode(5888);
         GlStateManager.pushMatrix();
         GlStateManager.loadIdentity();
-        GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-        GlStateManager.rotate(180.0F, 1.0F, 0.0F, 0.0F);
-        GlStateManager.rotate(90.0F, 0.0F, 0.0F, 1.0F);
+        GlStateManager.color(1.1F, 1.3F, 34.0F, 143.0F);
+        GlStateManager.rotate(180.0F, 143.0F, 0.045F, 0.0F);
+        GlStateManager.rotate(90.0F, 5.0F, 54.0F, 14.0F);
         GlStateManager.enableBlend();
         GlStateManager.disableAlpha();
         GlStateManager.disableCull();
@@ -450,7 +454,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
 
                 if (l == 4)
                 {
-                    GlStateManager.rotate(90.0F, 1.0F, 0.0F, 0.0F);
+                    GlStateManager.rotate(70.0F, 1.0F, 0.0F, 0.0F);
                 }
 
                 if (l == 5)
@@ -636,7 +640,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
         GlStateManager.scale(f, f, f);
         this.drawCenteredString(this.fontRendererObj, this.splashText, 0, -8, -256);
         GlStateManager.popMatrix();
-        String s = "Minecraft 1.8.9";
+        String s = "SpiritualClient 1.0";
 
         if (this.mc.isDemo())
         {
@@ -668,7 +672,7 @@ public class GuiMainMenu extends GuiScreen implements GuiYesNoCallback
             this.drawString(this.fontRendererObj, s, 2, this.height - 10, -1);
         }
 
-        String s2 = "Copyright Mojang AB. Do not distribute!";
+        String s2 = "By cooltcfplayz.";
         this.drawString(this.fontRendererObj, s2, this.width - this.fontRendererObj.getStringWidth(s2) - 2, this.height - 10, -1);
 
         if (this.openGLWarning1 != null && this.openGLWarning1.length() > 0)

@@ -1,0 +1,37 @@
+11:43:32 - == MCP 9.18 (data: 9.18, client: 1.8.9, server: 1.8.9) ==
+11:43:32 - OS : win32
+11:43:32 - "scalac" is not found on the PATH.  Scala files will not be recompiled
+11:43:32 - # VERSION INFO
+11:43:32 - python: 2.7.3 (default, Apr 10 2012, 23:31:26) [MSC v.1500 32 bit (Intel)]
+11:43:32 - platform: Windows-post2008Server-6.2.9200
+11:43:32 - # java: '"C:\Program Files\Java\jdk1.8.0_281\bin\java" -version'
+11:43:32 - java version "1.8.0_281"
+Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.281-b09, mixed mode)
+11:43:32 - # javac: '"C:\Program Files\Java\jdk1.8.0_281\bin\javac" -version'
+11:43:33 - javac 1.8.0_281
+11:43:33 - # javac runtime: '"C:\Program Files\Java\jdk1.8.0_281\bin\javac" -J-version'
+11:43:33 - java version "1.8.0_281"
+Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.281-b09, mixed mode)
+11:43:33 - # retroguard: 'runtime\bin\retroguard.jar --version'
+11:43:33 - RetroGuard MCP v3.6.5
+based on RetroGuard v2.3.1 by Retrologic Systems - www.retrologic.com
+11:43:33 - # specialsource: 'runtime\bin\specialsource.jar --version'
+11:43:33 - SpecialSource v{something}
+11:43:33 - # mcinjector: 'runtime\bin\mcinjector.jar --version'
+11:43:33 - MCInjector v3.4 by Searge, LexManos, Fesh0r
+11:43:33 - # patch: 'runtime\bin\applydiff.exe --version'
+11:43:33 - patch 2.5.4
+11:43:33 - # astyle: 'runtime\bin\astyle.exe --version'
+11:43:34 - Artistic Style Version 2.02.1
+11:43:34 - # jadretro: 'runtime\bin\jadretro.jar'
+11:43:34 - Error: Unable to access jarfile runtime\bin\jadretro.jar
+11:43:34 - # jad: 'runtime\bin\jad.exe'
+11:43:34 - # fernflower: 'runtime\bin\fernflower.jar'
+11:43:34 - Usage: java -jar fernflower.jar [-<option>=<value>]* [<source>]+ <destination>
+11:43:34 - # found ff, ff patches, srgs, name csvs, doc csvs, param csvs, astyle, astyle config, rg, ss
+11:44:12 - client md5: 396099e23e58309d21713ab5d7c1d1a8
+11:44:12 - !! Modified jar detected. Unpredictable results !!
+11:44:12 - !! client already decompiled. Run cleanup before decompiling again !!
+11:44:12 - !! Missing server jar file. Aborting !!

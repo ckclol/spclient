@@ -30,7 +30,8 @@ public enum EnumChatFormatting
     STRIKETHROUGH("STRIKETHROUGH", 'm', true),
     UNDERLINE("UNDERLINE", 'n', true),
     ITALIC("ITALIC", 'o', true),
-    RESET("RESET", 'r', -1);
+    RESET("RESET", 'r', -1),
+    RAINBOW("RAINBOW", 'a', -1337);
 
     private static final Map<String, EnumChatFormatting> nameMapping = Maps.<String, EnumChatFormatting>newHashMap();
 
@@ -137,9 +138,13 @@ public enum EnumChatFormatting
         return friendlyName == null ? null : (EnumChatFormatting)nameMapping.get(func_175745_c(friendlyName));
     }
 
-    public static EnumChatFormatting func_175744_a(int p_175744_0_)
+    public static EnumChatFormatting fromID(int id)
     {
-        if (p_175744_0_ < 0)
+    	if (id == -1337)
+    	{
+    		return RAINBOW;
+    	}
+        if (id < 0)
         {
             return RESET;
         }
@@ -147,7 +152,7 @@ public enum EnumChatFormatting
         {
             for (EnumChatFormatting enumchatformatting : values())
             {
-                if (enumchatformatting.getColorIndex() == p_175744_0_)
+                if (enumchatformatting.getColorIndex() == id)
                 {
                     return enumchatformatting;
                 }
